@@ -3,173 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>東京五日遊｜行程規劃 & 團員投票</title>
+    <title>東京五日遊｜團體行程手冊</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
         body { font-family: 'Noto Sans TC', system-ui, sans-serif; }
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/id/1015/2000/1200') center/cover;
         }
-        .card-hover { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        .card-hover:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25); }
-        .voted { background-color: #16a34a !important; color: white !important; cursor: default; pointer-events: none; }
+        .day-card { transition: all 0.3s; }
+        .day-card:hover { transform: translateY(-8px); }
     </style>
 </head>
 <body class="bg-gray-50">
 
-<nav class="bg-white border-b shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-red-500 text-white rounded-2xl flex items-center justify-center text-2xl">🇯🇵</div>
-            <h1 class="text-2xl font-bold text-gray-900">東京五日遊</h1>
-            <span class="px-3 py-1 text-sm font-medium bg-red-100 text-red-600 rounded-3xl">五天四夜 • 6/17～6/21</span>
+            <span class="text-3xl">🇯🇵</span>
+            <h1 class="text-2xl font-bold">東京五日遊</h1>
         </div>
-        <div class="flex items-center gap-6 text-sm font-medium">
-            <a href="#info" class="hover:text-red-500 transition-colors">基本資訊</a>
-            <a href="#proposed" class="hover:text-red-500 transition-colors">團員提議</a>
-            <a href="#recommend" class="hover:text-red-500 transition-colors">推薦行程</a>
-            <a href="#vote" class="hover:text-red-500 transition-colors">團員投票區</a>
-        </div>
+        <a href="https://line.me" target="_blank" 
+           class="bg-green-500 text-white px-6 py-2.5 rounded-full flex items-center gap-2 text-sm font-medium">
+            📱 分享到 LINE
+        </a>
     </div>
 </nav>
 
-<header class="hero-bg text-white py-24">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-        <h2 class="text-5xl font-bold mb-4">東京五日遊 行程規劃</h2>
-        <p class="text-2xl mb-8">五天四夜 • 一起投票決定最佳玩法！</p>
-        <button onclick="document.getElementById('vote').scrollIntoView({ behavior: 'smooth' })" 
-                class="mt-6 bg-white text-red-600 hover:bg-red-50 font-semibold px-10 py-4 rounded-3xl text-lg shadow-xl">
-            立即參與投票 👉
-        </button>
+<header class="hero-bg text-white py-28 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-5xl font-bold mb-4">東京五日四夜團體行程</h2>
+        <p class="text-2xl mb-6">2026 年 6 月 17 日 ～ 6 月 21 日</p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm">
+            <div class="bg-white/20 px-6 py-3 rounded-3xl">🛫 去程：6/17 14:35 桃園 → 18:35 成田</div>
+            <div class="bg-white/20 px-6 py-3 rounded-3xl">🛬 回程：6/21 17:55 成田 → 20:35 桃園</div>
+            <div class="bg-white/20 px-6 py-3 rounded-3xl">🏨 三井花園飯店柏之葉－千葉</div>
+        </div>
     </div>
 </header>
 
-<!-- 基本資訊區塊（省略中間部分以節省空間，你可以把之前版本的中間內容貼回來，或告訴我我再補完整） -->
-<!-- 為了快速修復，我先給你核心投票功能正常的版本 -->
+<div class="max-w-6xl mx-auto px-6 py-12">
 
-<section id="vote" class="bg-red-600 py-16 text-white">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="flex justify-between items-end mb-10">
-            <div>
-                <h2 class="text-4xl font-bold">🗳️ 團員投票區</h2>
-                <p class="text-red-100 mt-2">每個活動每人只能投 1 票</p>
+    <!-- 每日行程 -->
+    <h2 class="text-3xl font-bold text-center mb-10">📅 每日行程規劃</h2>
+    
+    <!-- 在這裡替換成你實際的行程內容 -->
+    <div id="itinerary" class="space-y-10">
+        <!-- Day 1 示例，你可以繼續複製修改 -->
+        <div class="day-card bg-white rounded-3xl shadow p-8">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="text-5xl font-bold text-red-500">Day 1</div>
+                <div>
+                    <div class="text-2xl font-semibold">6月17日（三）｜抵達日</div>
+                    <div class="text-gray-500">抵達成田 → 入住飯店 → 輕鬆適應</div>
+                </div>
             </div>
-            <button onclick="clearVotes()" 
-                    class="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-3xl text-sm font-semibold">
-                🔄 重置我的投票
-            </button>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="border-l-4 border-red-400 pl-4">
+                    <div class="font-medium text-sm text-gray-500">18:35 後</div>
+                    <div class="font-semibold">成田機場入境 → 飯店接駁或電車前往柏之葉</div>
+                </div>
+                <div class="border-l-4 border-red-400 pl-4">
+                    <div class="font-medium text-sm text-gray-500">晚上</div>
+                    <div class="font-semibold">飯店附近晚餐 + 超市採買</div>
+                </div>
+            </div>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="vote-area"></div>
+        <!-- 你可以繼續新增 Day 2 ~ Day 5 -->
+        <!-- 範例格式：複製上面整個 <div class="day-card ..."> ... </div> 然後修改日期與內容 -->
+    </div>
 
-        <div class="mt-12 bg-white/10 backdrop-blur-md rounded-3xl p-8 text-center">
-            <p class="text-xl font-medium">投票小提醒</p>
-            <p class="text-red-100 mt-2">投票只記錄在你自己的瀏覽器。<br>投完後可以截圖告訴團長～</p>
-            <p class="mt-6">總投票數： <span id="total-votes" class="font-mono font-bold text-3xl">0</span></p>
+    <!-- 其他實用區塊 -->
+    <div class="mt-16 grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl shadow p-8">
+            <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">🚇 交通建議</h3>
+            <p class="text-gray-600">從柏之葉到東京市區約 40~60 分鐘，可使用 Suica / Pasmo 或 ICOCA 卡。</p>
+            <!-- 可以放 JR / 地鐵路線圖連結 -->
+        </div>
+        <div class="bg-white rounded-3xl shadow p-8">
+            <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">⚠️ 注意事項</h3>
+            <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                <li>日本插座為 A 型，記得帶轉接頭</li>
+                <li>公共場合安靜，勿大聲講電話</li>
+                <li>垃圾分類嚴格，請配合</li>
+            </ul>
         </div>
     </div>
-</section>
 
-<footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm">
-    <p>由 Grok 為你製作的東京五日遊投票網頁</p>
-    <p class="mt-2 text-xs">如果還是空白，請按 Ctrl + F5 強制重新整理</p>
+</div>
+
+<footer class="bg-gray-900 text-gray-400 py-12 text-center text-sm">
+    <p>東京五日遊團體行程手冊 • 2026</p>
+    <p class="mt-2">有任何問題或想修改行程，歡迎在 LINE 群組討論！</p>
 </footer>
 
 <script>
-    let activities = [
-        { id: 1, name: "東京哈利波特製片廠之旅門票", desc: "華納兄弟哈利波特影城（練馬區）｜體驗電影魔法世界！", type: "proposed", votes: 0 },
-        { id: 2, name: "Spadium Japon（スパジアムジャポン）", desc: "關東最大級天然溫泉＆岩盤浴，一天放鬆泡湯", type: "proposed", votes: 0 },
-        { id: 3, name: "東京迪士尼樂園 / 海洋", desc: "從柏之葉搭電車約50分鐘，夢幻樂園全天玩樂", type: "recommend", votes: 0 },
-        { id: 4, name: "淺草寺 & 東京晴空塔", desc: "傳統寺廟 + 登塔眺望東京全景", type: "recommend", votes: 0 },
-        { id: 5, name: "澀谷 & 原宿潮流區", desc: "澀谷十字路口 + 竹下通購物美食", type: "recommend", votes: 0 },
-        { id: 6, name: "秋葉原電器街", desc: "動漫、電玩、女僕咖啡廳天堂", type: "recommend", votes: 0 }
-    ];
-
-    let votedItems = [];
-
-    function loadData() {
-        const savedVotes = localStorage.getItem('tokyoTripVotes');
-        const savedVoted = localStorage.getItem('tokyoTripVotedItems');
-
-        if (savedVotes) {
-            const parsed = JSON.parse(savedVotes);
-            activities.forEach(a => {
-                if (parsed[a.id] !== undefined) a.votes = parsed[a.id];
-            });
-        }
-        if (savedVoted) votedItems = JSON.parse(savedVoted);
-    }
-
-    function saveData() {
-        const voteData = {};
-        activities.forEach(a => voteData[a.id] = a.votes);
-        localStorage.setItem('tokyoTripVotes', JSON.stringify(voteData));
-        localStorage.setItem('tokyoTripVotedItems', JSON.stringify(votedItems));
-        document.getElementById('total-votes').textContent = activities.reduce((sum, a) => sum + a.votes, 0);
-    }
-
-    function vote(id) {
-        if (votedItems.includes(id)) {
-            alert("你已經投過這個活動了！\n每人每個項目只能投 1 票喔～");
-            return;
-        }
-
-        const act = activities.find(a => a.id === id);
-        if (act) {
-            act.votes++;
-            votedItems.push(id);
-            saveData();
-            renderVoteArea();
-            alert(`✅ 已成功為「${act.name}」投下 1 票！`);
-        }
-    }
-
-    function clearVotes() {
-        if (confirm('確定要清除你所有的投票紀錄嗎？')) {
-            activities.forEach(a => a.votes = 0);
-            votedItems = [];
-            localStorage.removeItem('tokyoTripVotes');
-            localStorage.removeItem('tokyoTripVotedItems');
-            renderVoteArea();
-        }
-    }
-
-    function renderVoteArea() {
-        const container = document.getElementById('vote-area');
-        container.innerHTML = '';
-
-        activities.forEach(act => {
-            const isVoted = votedItems.includes(act.id);
-            const label = act.type === 'proposed' 
-                ? `<span class="px-3 py-1 text-xs bg-yellow-100 text-yellow-700 rounded-full">團員提議</span>` 
-                : `<span class="px-3 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">推薦</span>`;
-
-            const btn = isVoted 
-                ? `<button class="voted w-full py-4 rounded-3xl font-semibold text-lg">✅ 你已經投過</button>`
-                : `<button onclick="vote(${act.id})" class="w-full py-4 bg-white hover:bg-gray-100 text-red-600 font-semibold rounded-3xl flex items-center justify-center gap-3 transition-colors">
-                    <span class="text-2xl">👍</span> 投我一票
-                   </button>`;
-
-            container.innerHTML += `
-            <div class="bg-white/95 text-gray-900 rounded-3xl shadow p-7 flex flex-col">
-                <div class="flex justify-between items-start mb-5">
-                    ${label}
-                    <div class="text-5xl font-bold text-red-500">${act.votes}</div>
-                </div>
-                <h3 class="text-xl font-bold leading-tight">${act.name}</h3>
-                <p class="text-gray-600 mt-4 flex-1">${act.desc}</p>
-                <div class="mt-8">${btn}</div>
-            </div>`;
-        });
-    }
-
-    // 初始化
-    window.onload = () => {
-        loadData();
-        renderVoteArea();
-        console.log('%c✅ 東京五日遊投票網頁已修復完成！', 'color:#e11d48;font-size:15px;font-weight:bold');
-    };
+    // 如果想讓頁面更生動，可以之後再加簡單 JS
+    console.log('✅ 東京行程網頁已載入');
 </script>
 </body>
 </html>
