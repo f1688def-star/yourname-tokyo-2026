@@ -3,463 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="東京 6/17～6/21 五天四夜行程提案｜柏之葉住宿｜哈利波特、溫泉、水族館、美食投票用">
-    <title>東京 6/17～6/21｜五天四夜行程提案｜投票用</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>東京6月行程｜柏之葉基地 雨天備案</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;display=swap');
-        
-        :root {
-            --tw-color-primary: #d32f2f;
-        }
-        
-        body {
-            font-family: 'Noto Sans TC', system-ui, sans-serif;
-        }
-        
-        .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
-        }
-        
-        .card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-        
-        .tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 0.75rem;
-            padding: 2px 10px;
-            border-radius: 9999px;
-        }
-        
-        .vote-btn {
-            transition: all 0.3s ease;
-        }
-        
-        .vote-btn.active {
-            background-color: #d32f2f;
-            color: white;
-        }
+        body { font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 15px; background: #f9f9f9; color: #333; line-height: 1.6; }
+        h1 { text-align: center; color: #0066cc; margin-bottom: 10px; }
+        h2 { color: #0066cc; border-bottom: 2px solid #eee; padding-bottom: 8px; margin-top: 25px; }
+        .day { background: white; border-radius: 12px; padding: 15px; margin-bottom: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .highlight { background: #fff3e0; padding: 12px; border-radius: 8px; margin: 12px 0; }
+        .note { font-size: 0.9em; color: #555; background: #f0f0f0; padding: 10px; border-radius: 8px; }
+        .rain { background: #e3f2fd; border-left: 5px solid #2196f3; }
+        ul { padding-left: 20px; }
+        .separator { border-top: 1px dashed #ccc; margin: 30px 0; }
     </style>
 </head>
-<body class="bg-zinc-50 text-zinc-800">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <i class="fa-solid fa-plane text-3xl text-red-600"></i>
-                <div>
-                    <h1 class="text-2xl font-bold tracking-tight">東京 6/17～6/21</h1>
-                    <p class="text-xs text-zinc-500 -mt-1">五天四夜｜柏之葉住宿</p>
-                </div>
-            </div>
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#overview" class="hover:text-red-600 transition-colors">行程總覽</a>
-                <a href="#attractions" class="hover:text-red-600 transition-colors">景點提案</a>
-                <a href="#dining" class="hover:text-red-600 transition-colors">美食推薦</a>
-                <a href="#tips" class="hover:text-red-600 transition-colors">小提醒</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="https://github.com/你的帳號/你的專案" target="_blank"
-                   class="flex items-center gap-2 text-sm bg-zinc-900 text-white px-5 py-2 rounded-3xl hover:bg-red-600 transition-colors">
-                    <i class="fa-brands fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-                <button onclick="copyLink()" 
-                        class="flex items-center gap-2 text-sm border border-zinc-300 px-5 py-2 rounded-3xl hover:border-red-600 transition-colors">
-                    <i class="fa-solid fa-share-nodes"></i>
-                    <span>分享連結</span>
-                </button>
-            </div>
-        </div>
-    </nav>
+<body>
 
-    <!-- Hero -->
-    <header class="hero-bg h-screen flex items-center text-white">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-3xl mb-6 text-sm">
-                <i class="fa-solid fa-calendar-days"></i>
-                <span>2026 年 6 月 17 日（三）～ 6 月 21 日（日）</span>
-            </div>
-            <h2 class="text-5xl md:text-7xl font-bold tracking-tighter mb-4">東京五天四夜<br>團體投票行程提案</h2>
-            <p class="max-w-md mx-auto text-lg mb-8 opacity-90">
-                住宿：三井花園飯店柏之葉－千葉<br>
-                出發：桃園 14:35 → 成田 18:35　｜　回程：成田 17:55 → 桃園 20:35
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="#attractions" 
-                   class="bg-white text-zinc-900 px-8 py-4 rounded-3xl font-semibold flex items-center gap-3 hover:scale-105 transition">
-                    <i class="fa-solid fa-magic"></i>
-                    看景點提案
-                </a>
-                <a href="#dining" 
-                   class="border border-white px-8 py-4 rounded-3xl font-semibold flex items-center gap-3 hover:bg-white/10 transition">
-                    <i class="fa-solid fa-utensils"></i>
-                    看美食推薦
-                </a>
-            </div>
-            <div class="mt-16 text-xs opacity-60 flex justify-center gap-8">
-                <div>🛫 去程 4 小時</div>
-                <div>🛬 回程 2 小時 40 分</div>
-                <div>🏨 柏之葉科學城</div>
-            </div>
-        </div>
-    </header>
+    <h1>東京 6 月 5 天 4 夜行程</h1>
+    <p style="text-align:center; color:#666;">基地：三井花園飯店柏之葉｜LaLaport 柏之葉旁</p>
 
-    <!-- 行程總覽 -->
-    <section id="overview" class="max-w-7xl mx-auto px-6 py-16">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-3xl p-8 shadow-sm">
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-xl font-semibold">去程資訊</h3>
-                    <i class="fa-solid fa-plane-departure text-4xl text-red-600"></i>
-                </div>
-                <p class="text-3xl font-bold">6/17（三）14:35</p>
-                <p class="text-zinc-500">台灣桃園國際機場 → 成田機場 18:35</p>
-                <div class="mt-8 text-sm text-zinc-400">抵達後搭 Tsukuba Express 或巴士 → 柏之葉飯店（約 60-80 分）</div>
-            </div>
-            
-            <div class="bg-white rounded-3xl p-8 shadow-sm border-2 border-red-600 relative">
-                <div class="absolute -top-3 -right-3 bg-red-600 text-white text-xs px-4 py-1 rounded-3xl font-bold">住宿地點</div>
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-xl font-semibold">三井花園飯店 柏之葉</h3>
-                    <i class="fa-solid fa-hotel text-4xl text-red-600"></i>
-                </div>
-                <p class="text-zinc-600">千葉縣柏市柏之葉 1-8-1</p>
-                <p class="mt-4 text-sm">鄰近 Tsukuba Express 柏之葉站，AEON MALL 步行 5 分鐘，科學城氛圍超舒服！</p>
-            </div>
-            
-            <div class="bg-white rounded-3xl p-8 shadow-sm">
-                <div class="flex items-center justify-between mb-6">
-                    <h3 class="text-xl font-semibold">回程資訊</h3>
-                    <i class="fa-solid fa-plane-arrival text-4xl text-red-600"></i>
-                </div>
-                <p class="text-3xl font-bold">6/21（日）17:55</p>
-                <p class="text-zinc-500">成田機場 → 台灣桃園國際機場 20:35</p>
-                <div class="mt-8 bg-amber-50 text-amber-700 rounded-2xl p-4 text-sm">
-                    <i class="fa-solid fa-lightbulb mr-2"></i>
-                    建議最後一天中午前從柏之葉出發，順路吃成田山鰻魚飯！
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- 6/17 -->
+    <div class="day">
+        <h2>6/17　抵達日（輕鬆調整時差）</h2>
+        <p><strong>14:35 桃園出發 → 18:35 成田機場抵達</strong></p>
+        <p>成田機場領行李 + 海關 → 搭電車/巴士到柏之葉（約 60-80 分鐘）</p>
+        <p><strong>晚上：</strong>入住三井花園飯店柏之葉 → LaLaport 柏之葉 簡單逛街購物 + 晚餐（商場、超市、餐廳超方便）</p>
+        <p>早點休息調整時差</p>
+        <div class="note">第一天輕鬆為主，不安排遠程活動。</div>
+    </div>
 
-    <!-- 景點提案 -->
-    <section id="attractions" class="bg-zinc-900 text-white py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex items-end justify-between mb-10">
-                <div>
-                    <span class="tag bg-red-600 text-white"><i class="fa-solid fa-mountain-sun"></i> 景點提案</span>
-                    <h2 class="text-4xl font-bold tracking-tight">從柏之葉出發的東京玩法</h2>
-                </div>
-                <p class="text-zinc-400 max-w-xs">每處都標註「從飯店出發約 XX 分鐘」，方便大家投票安排</p>
-            </div>
+    <!-- 6/18 -->
+    <div class="day">
+        <h2>6/18　第一天 – 淺草經典組（柏之葉約 40-50 分鐘）</h2>
+        <p><strong>早上：</strong>搭 Tsukuba Express → 淺草</p>
+        <p><strong>上午/中午：</strong>淺草寺 + 表參道 逛老街</p>
+        <p><strong>午餐：</strong>SUKE6 DINER（看晴空塔）或 銀座巴西咖啡 淺草店（炸雞塊/厚切豬排三明治）</p>
+        <p><strong>下午：</strong>東京晴空塔（登塔、購物）</p>
+        <p><strong>晚上：</strong>彈性去 Ginza Orions 高空酒吧 或 直接回柏之葉</p>
+        <div class="note">交通：區域內走路或短程地鐵，回飯店約 50-70 分鐘。</div>
+    </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 卡片 1 -->
-                <div class="card bg-white text-zinc-900 rounded-3xl overflow-hidden">
-                    <div class="h-2 bg-gradient-to-r from-purple-600 to-amber-600"></div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">東京哈利波特製片廠之旅</h3>
-                        <p class="text-zinc-600 text-sm leading-relaxed mb-6">
-                            Warner Bros. Studio Tour Tokyo<br>
-                            走進魔法世界，拍照超適合！
-                        </p>
-                        <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center gap-2 text-emerald-600">
-                                <i class="fa-solid fa-train"></i>
-                                <span>從柏之葉約 70～90 分鐘</span>
-                            </div>
-                            <span class="tag bg-purple-100 text-purple-700">魔法迷必去</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- 6/19 -->
+    <div class="day">
+        <h2>6/19　第二天 – 澀谷原宿潮流購物組（柏之葉約 60-80 分鐘）</h2>
+        <p><strong>早上：</strong>出發前往原宿/澀谷</p>
+        <p><strong>上午/中午：</strong>原宿竹下通 + 表參道（潮流、拍照、購物）</p>
+        <p><strong>午餐/下午茶：</strong>舞泉豬排 青山店（舊錢湯改造，氣氛佳）</p>
+        <p><strong>下午：</strong>澀谷十字路口逛街 + 新宿 LUMINE1（購物中心，雨天救星）</p>
+        <p><strong>晚上：</strong>繼續逛或直接回飯店</p>
+        <div class="note">原宿→表參道→澀谷→青山 可走路或短程地鐵串聯。</div>
+    </div>
 
-                <!-- 卡片 2 -->
-                <div class="card bg-white text-zinc-900 rounded-3xl overflow-hidden">
-                    <div class="h-2 bg-gradient-to-r from-cyan-500 to-blue-600"></div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Spadium Japon（スパジアムジャポン）</h3>
-                        <p class="text-zinc-600 text-sm leading-relaxed mb-6">
-                            關東大型天然溫泉＆岩盤浴<br>
-                            放鬆泡湯一整天，超療癒
-                        </p>
-                        <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center gap-2 text-emerald-600">
-                                <i class="fa-solid fa-train"></i>
-                                <span>從柏之葉約 50～70 分鐘</span>
-                            </div>
-                            <span class="tag bg-cyan-100 text-cyan-700">泡湯放鬆</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- 6/20 -->
+    <div class="day">
+        <h2>6/20　第三天 – Aqua Park 品川 + 目黑文青組（彈性最大）</h2>
+        <p><strong>早上：</strong>前往品川</p>
+        <p><strong>上午/中午：</strong>Aqua Park 品川（水族館，海豚表演、水母聲光秀，完全室內）</p>
+        <p><strong>下午：</strong>目黑川櫻花大道散步 + 菅刈公園 + 星巴克臻選東京烘焙工坊</p>
+        <p><strong>晚上：</strong>直接回飯店 或 品川/目黑附近補購物</p>
+        <div class="note">這天彈性最高，累了就早結束。</div>
+    </div>
 
-                <!-- 卡片 3 -->
-                <div class="card bg-white text-zinc-900 rounded-3xl overflow-hidden">
-                    <div class="h-2 bg-gradient-to-r from-blue-500 to-cyan-400"></div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Maxell Aqua Park 品川</h3>
-                        <p class="text-zinc-600 text-sm leading-relaxed mb-6">
-                            室內夢幻水族館<br>
-                            海豚表演＋漂亮聲光水母秀
-                        </p>
-                        <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center gap-2 text-emerald-600">
-                                <i class="fa-solid fa-train"></i>
-                                <span>從柏之葉約 60～80 分鐘（品川站步行 2 分）</span>
-                            </div>
-                            <span class="tag bg-blue-100 text-blue-700">室內雨天首選</span>
-                        </div>
-                    </div>
-                </div>
+    <!-- 6/21 -->
+    <div class="day">
+        <h2>6/21　第四天 / 離程日 – 成田山專用（完美順路）</h2>
+        <p><strong>早上：</strong>從柏之葉出發前往成田（約 60-90 分鐘）</p>
+        <p><strong>上午：</strong>成田山新勝寺 + 表參道 逛寺廟、老街</p>
+        <p><strong>午餐：</strong>川豊鰻魚飯（成田山總本店，百年老店，強推！）</p>
+        <p><strong>下午：</strong>吃完直接去成田機場（僅 10-15 分鐘）</p>
+        <p><strong>17:55 成田出發 → 20:35 桃園抵達</strong></p>
+        <div class="note">最後一天最輕鬆，吃完直接去機場。</div>
+    </div>
 
-                <!-- 卡片 4 -->
-                <div class="card bg-white text-zinc-900 rounded-3xl overflow-hidden">
-                    <div class="h-2 bg-gradient-to-r from-amber-500 to-orange-600"></div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">淺草寺＋東京晴空塔</h3>
-                        <p class="text-zinc-600 text-sm leading-relaxed mb-6">
-                            傳統老街＋登塔看夜景<br>
-                            東京經典組合
-                        </p>
-                        <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center gap-2 text-emerald-600">
-                                <i class="fa-solid fa-train"></i>
-                                <span>從柏之葉約 50～70 分鐘</span>
-                            </div>
-                            <span class="tag bg-amber-100 text-amber-700">經典必拍</span>
-                        </div>
-                    </div>
-                </div>
+    <div class="separator"></div>
 
-                <!-- 卡片 5 -->
-                <div class="card bg-white text-zinc-900 rounded-3xl overflow-hidden">
-                    <div class="h-2 bg-gradient-to-r from-pink-500 to-rose-500"></div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">澀谷＆原宿潮流區</h3>
-                        <p class="text-zinc-600 text-sm leading-relaxed mb-6">
-                            澀谷十字路口＋竹下通購物美食拍照
-                        </p>
-                        <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center gap-2 text-emerald-600">
-                                <i class="fa-solid fa-train"></i>
-                                <span>從柏之葉約 60～80 分鐘</span>
-                            </div>
-                            <span class="tag bg-pink-100 text-pink-700">潮流打卡</span>
-                        </div>
-                    </div>
-                </div>
+    <h1 style="color:#d32f2f;">🌧️ 雨天備案調整建議</h1>
 
-                <!-- 卡片 6 -->
-                <div class="card bg-white text-zinc-900 rounded-3xl overflow-hidden">
-                    <div class="h-2 bg-gradient-to-r from-purple-600 to-indigo-600"></div>
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">秋葉原電器街</h3>
-                        <p class="text-zinc-600 text-sm leading-relaxed mb-6">
-                            動漫、電玩、模型、女僕咖啡廳<br>
-                            買伴手禮最方便！
-                        </p>
-                        <div class="flex items-center justify-between text-sm">
-                            <div class="flex items-center gap-2 text-emerald-600">
-                                <i class="fa-solid fa-train"></i>
-                                <span>從柏之葉搭 Tsukuba Express 只要 34 分鐘</span>
-                            </div>
-                            <span class="tag bg-purple-100 text-purple-700">動漫天堂</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- 雨天 6/18 -->
+    <div class="day rain">
+        <h2>6/18　雨天 – 淺草經典組</h2>
+        <p>重點轉移到完全室內的 <strong>Tokyo Skytree Town</strong>：</p>
+        <ul>
+            <li>登晴空塔 + Solamachi 商場購物</li>
+            <li><strong>Sumida Aquarium</strong>（水族館，企鵝、水母秀）</li>
+            <li>Konica Minolta Planetarium「天空」（躺著看星空投影）</li>
+        </ul>
+        <p>午餐維持原推薦，晚上可去室內高空酒吧或早回飯店。</p>
+        <div class="highlight">把重心從老街散步 → Skytree 室內綜合體驗</div>
+    </div>
 
-    <!-- 美食推薦 -->
-    <section id="dining" class="max-w-7xl mx-auto px-6 py-16">
-        <div class="flex items-end justify-between mb-10">
-            <div>
-                <span class="tag bg-orange-600 text-white"><i class="fa-solid fa-utensils"></i> 美食推薦</span>
-                <h2 class="text-4xl font-bold tracking-tight">團員最愛的日本美食提案</h2>
-            </div>
-            <p class="text-zinc-500 max-w-xs">每家都附地點、時間、建議搭配行程，方便排進投票表</p>
-        </div>
+    <!-- 雨天 6/19 -->
+    <div class="day rain">
+        <h2>6/19　雨天 – 澀谷原宿購物組</h2>
+        <p>這天本來就購物為主，雨天反而更舒服！</p>
+        <p><strong>加強版商場推薦：</strong></p>
+        <ul>
+            <li>Shibuya Scramble Square、Hikarie、Mark City、LUMINE</li>
+            <li>Tokyu Plaza Harajuku Harakado（有澡堂、圖書館）</li>
+            <li>表參道 Hills、青山室內購物中心</li>
+        </ul>
+        <p>午餐舞泉豬排維持。雨大就全天商場 + 咖啡廳巡禮。</p>
+    </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
-            <!-- 鰻魚飯 -->
-            <div class="card bg-white rounded-3xl p-8 flex flex-col">
-                <div class="flex-1">
-                    <h3 class="text-2xl font-semibold">川豊鰻魚飯（成田山總本店）</h3>
-                    <p class="text-zinc-600 mt-2">百年老店！現剖現烤鰻魚，醬汁濃郁，「特上うな重」超推薦</p>
-                    <div class="mt-6 space-y-3 text-sm">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-location-dot text-orange-600 w-5"></i>
-                            <span>千葉県成田市仲町386（成田站步行 10 分）</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-clock text-orange-600 w-5"></i>
-                            <span>10:00 - 17:00（最後點餐依人潮）</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8 pt-8 border-t text-emerald-600 text-sm flex items-center justify-between">
-                    <span>從成田機場搭電車約 15 分鐘</span>
-                    <span class="bg-emerald-100 px-4 py-1 rounded-3xl">建議安排在回程當天中午</span>
-                </div>
-            </div>
+    <!-- 雨天 6/20 -->
+    <div class="day rain">
+        <h2>6/20　雨天 – Aqua Park 品川 + 目黑組</h2>
+        <p>這天本來就是雨天友好日！</p>
+        <p><strong>上午強力建議：</strong>多留時間在 Aqua Park 品川（完全室內）</p>
+        <p><strong>下午替代：</strong>目黑川改成品川站周邊商場（Atre Shinagawa）或直接回柏之葉 LaLaport。</p>
+        <p>星巴克烘焙工坊雨小可去，雨大跳過。</p>
+        <div class="highlight">可當作「雨天救星日」，把前面沒玩到的室內活動挪過來。</div>
+    </div>
 
-            <!-- 豬排 -->
-            <div class="card bg-white rounded-3xl p-8 flex flex-col">
-                <div class="flex-1">
-                    <h3 class="text-2xl font-semibold">舞泉豬排 青山店（とんかつまい泉）</h3>
-                    <p class="text-zinc-600 mt-2">筷子就能夾斷的超軟嫩豬排！舊錢湯改造，挑高屋頂超有氣氛</p>
-                    <div class="mt-6 space-y-3 text-sm">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-location-dot text-orange-600 w-5"></i>
-                            <span>東京都渋谷区神宮前4-8-5（表參道站 A2 出口步行 3 分）</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-clock text-orange-600 w-5"></i>
-                            <span>11:00 - 21:00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8 pt-8 border-t text-emerald-600 text-sm flex items-center justify-between">
-                    <span>適合搭配澀谷・原宿行程</span>
-                    <span class="bg-emerald-100 px-4 py-1 rounded-3xl">排隊速度快，座位多</span>
-                </div>
-            </div>
+    <!-- 雨天 6/21 -->
+    <div class="day rain">
+        <h2>6/21　雨天 – 成田山離程日</h2>
+        <p>重點放在成田山新勝寺本殿參拜（室內），縮短表參道戶外時間。</p>
+        <p>午餐川豊鰻魚飯維持推薦！</p>
+        <p>雨很大可在成田站或 <strong>AEON MALL Narita</strong> 多逛一下再去機場。</p>
+        <p>整體影響最小，吃完直接撤。</p>
+    </div>
 
-            <!-- 新宿 LUMINE -->
-            <div class="card bg-white rounded-3xl p-8 flex flex-col">
-                <div class="flex-1">
-                    <h3 class="text-2xl font-semibold">新宿 LUMINE1（4樓咖啡廳＆購物）</h3>
-                    <p class="text-zinc-600 mt-2">新宿轉運站核心購物中心，精緻咖啡廳＋流行服飾，雨天逛街超方便</p>
-                    <div class="mt-6 space-y-3 text-sm">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-location-dot text-orange-600 w-5"></i>
-                            <span>東京都新宿区西新宿1-1-5 ルミネ新宿LUMINE1 4F</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-clock text-orange-600 w-5"></i>
-                            <span>11:00 - 21:00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8 pt-8 border-t text-emerald-600 text-sm">JR 新宿站出站即達，適合轉乘或雨天備案</div>
-            </div>
+    <div class="note" style="margin-top:30px;">
+        <strong>雨天小提醒：</strong><br>
+        帶輕便雨傘、防水鞋、備用衣服。<br>
+        東京地鐵站內與地下通道多，淋雨機會不高。<br>
+        LaLaport 柏之葉隨時可以回來休息、吃飯、購物。
+    </div>
 
-            <!-- 銀座酒吧 -->
-            <div class="card bg-white rounded-3xl p-8 flex flex-col">
-                <div class="flex-1">
-                    <h3 class="text-2xl font-semibold">Ginza Orions 高空景觀酒吧</h3>
-                    <p class="text-zinc-600 mt-2">隱身 10 樓的昭和復古空間，俯瞰銀座夜景，大人味深夜行程</p>
-                    <div class="mt-6 space-y-3 text-sm">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-location-dot text-orange-600 w-5"></i>
-                            <span>東京都中央區銀座 7-3-13 New Ginza Building 10F</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-clock text-orange-600 w-5"></i>
-                            <span>13:00 - 23:00（六、日、國定假日公休）</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-8 pt-8 border-t text-red-600 text-sm font-medium">提醒：6/20（六）、6/21（日）公休喔！</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 小提醒 & 投票建議 -->
-    <section id="tips" class="bg-zinc-100 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-10">團員投票小提醒</h2>
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="bg-white rounded-3xl p-6 text-center">
-                    <i class="fa-solid fa-map text-4xl text-red-600 mb-4"></i>
-                    <h4 class="font-semibold mb-2">交通超方便</h4>
-                    <p class="text-sm text-zinc-600">柏之葉站有 Tsukuba Express 直達秋葉原、澀谷、品川都很近</p>
-                </div>
-                <div class="bg-white rounded-3xl p-6 text-center">
-                    <i class="fa-solid fa-cloud-rain text-4xl text-red-600 mb-4"></i>
-                    <h4 class="font-semibold mb-2">6 月梅雨季</h4>
-                    <p class="text-sm text-zinc-600">記得帶輕便雨傘，水族館、溫泉、室內景點都是雨天好選擇</p>
-                </div>
-                <div class="bg-white rounded-3xl p-6 text-center">
-                    <i class="fa-solid fa-vote-yea text-4xl text-red-600 mb-4"></i>
-                    <h4 class="font-semibold mb-2">投票方式建議</h4>
-                    <p class="text-sm text-zinc-600">每人選 3～4 個最想去的，群組討論後排入 5 天</p>
-                </div>
-                <div class="bg-white rounded-3xl p-6 text-center">
-                    <i class="fa-solid fa-yen-sign text-4xl text-red-600 mb-4"></i>
-                    <h4 class="font-semibold mb-2">Suica / Pasmo</h4>
-                    <p class="text-sm text-zinc-600">到機場先買一張，搭車、買東西都超方便</p>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12 text-zinc-500 text-sm">
-                這個網頁已經幫你整理得超清楚！<br>
-                直接複製成 <span class="font-mono bg-white px-2 py-1 rounded">index.html</span> 上傳 GitHub Pages 就能公開分享給團員投票啦～
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-zinc-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center text-sm">
-            <p>由 Sea Otter 整理｜Powered by Grok + Tailwind</p>
-            <p class="mt-2 text-zinc-500">有任何想加的景點、想改設計、想加照片或 Google Maps 連結，隨時告訴我，我馬上幫你更新！</p>
-        </div>
-    </footer>
-
-    <script>
-        // Tailwind script initialization
-        function initializeTailwind() {
-            return {
-                config(userConfig = {}) {
-                    return {
-                        configUser: userConfig,
-                        theme: {
-                            extend: {},
-                        },
-                    }
-                },
-                theme(userConfig = {}) {
-                    return {
-                        configUser: userConfig,
-                        theme: {
-                            extend: {},
-                        },
-                    }
-                },
-            }
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            const config = initializeTailwind().config({
-                content: [],
-                theme: { extend: {} },
-            })
-            return config
-        })
-
-        // 簡單投票按鈕互動（可選）
-        function copyLink() {
-            const url = window.location.href
-            navigator.clipboard.writeText(url).then(() => {
-                const btn = document.querySelector('button[onclick="copyLink()"]')
-                const originalText = btn.innerHTML
-                btn.innerHTML = `<i class="fa-solid fa-check"></i> 已複製！`
-                setTimeout(() => { btn.innerHTML = originalText }, 2000)
-            })
-        }
-
-        // 讓卡片可以點擊「投票」示意（未來可擴充成真投票）
-        console.log('%c✅ HTML 已準備好！直接上傳 GitHub 就能用了～', 'color:#d32f2f; font-size:14px')
-    </script>
 </body>
 </html>
